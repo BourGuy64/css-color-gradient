@@ -271,3 +271,14 @@ a{
   color: white;
   border-radius: .3em;
 }
+
+.not-selected{
+  padding: .3em;
+  border-radius: .3em;
+  
+  &:hover{
+    background-color: black;
+    color: white;
+    transition: all .3s;
+  }
+}
