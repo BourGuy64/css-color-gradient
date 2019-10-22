@@ -212,10 +212,10 @@ a {
 
 .not-selected {
   padding: .3em;
-  border-radius: .3em; }
+  border-radius: .3em;
+  transition: all .3s; }
   .not-selected:hover {
     background-color: black;
-    color: white;
-    transition: all .3s; }
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */
