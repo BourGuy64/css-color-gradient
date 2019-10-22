@@ -276,6 +276,7 @@ a{
   padding: .3em;
   border-radius: .3em;
   transition: all .3s;
+  border: 1px dashed black;
   &:hover{
     background-color: black;
     color: white;    

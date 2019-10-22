@@ -213,7 +213,8 @@ a {
 .not-selected {
   padding: .3em;
   border-radius: .3em;
-  transition: all .3s; }
+  transition: all .3s;
+  border: 1px dashed black; }
   .not-selected:hover {
     background-color: black;
     color: white; }
