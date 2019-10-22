@@ -74,6 +74,11 @@
           <div class="attribut">background:</div>
           <div class="value">linear-gradient(0deg, red 33%, blue 33%, blue 66%, violet 66%);</div>
         </div>
+        =
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(0deg, red 33%, blue 33% 66%, violet 66%);</div>
+        </div>
       </div>
       <p class="grandient_radial">Dégrade du rose, au centre vers le rouge.</p>
       <p>Le dégradé peut prendre un paramètre avant de déclaré les couleurs afin de définir le centre :</p>
@@ -149,6 +154,21 @@
       <div class="grandient_radial_repeat"></div>
       <h3>Compatibilité navigateur pour CSS gradient</h3>
       <div class="compatibility"><img src="img/compatibility/CSS - Gradient.png" alt="CSS - Gradient"></div>
+      <p>*Les cases en vert clair indique que certaines manières d'utilisées gradient ne sont pas supporter. Pour safari par exemple on ne peut pas utiliser :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(0deg, red 33%, blue 33% 66%, violet 66%);</div>
+        </div>
+      </div>
+      <p>..à la place de :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(0deg, red 33%, blue 33%, blue 66%, violet 66%);</div>
+        </div>
+      </div>
+
       <h3>Dégradé conique</h3>
       <p>La fonction conic-gradient(from <i>angle</i> at <i>position</i>  , <i>color</i>, <i>color</i>) permet de crée une dégradé dans le sens des aiguilles d'une montre:</p>
       <div class="code_block">
