@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS - Gradient/Color</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div><a class="is-selected" href="index.html">Color Module</a> et <a href="gradient.html">CSS Gradient</a></div>
+      <div>Démo : <a href="https://codepen.io/thebas57/pen/zYOVZbb" target="_blank"><img src="img/codepen.svg" alt="codepen" href="https://codepen.io/thebas57/pen/zYOVZbb"></a></div>
+    </div>
+    <div class="container">
+      <h2>CSS Color Module</h2>
+      <p>Le CSS color module est une façon de décrire une couleur afin de l'appliqué sur un élément HTML.</p>
+      <p>Les couleurs peuvent être appliquées dans plusieurs contexte, afin de choisir la couleur d'un fond, d'une police d'écriture ou même d'effets plus complexes tel que des ombres. Les propriétés "background-color" et "color" s'appuyent donc sur le color module CSS.</p>
+      <div class="card-background">Exemple pour définir le fond de cette carte</div>
+      <p>La carte ci-dessus possède l'attribut de style "background-color: <b>pink</b>". Pink est donc compris comme une couleur est peut être utilisé pour définir une couleur.</p>
+      <p>Le color module accepte un mot, un code hexadécimal, un code de 3 octets (1 pour chaque couleur primaire. Rouge, Bleu, Vert).</p>
+      <p>Le format pour définir une couleur en faisant le mélange des 3 couleurs primaires est le suivant :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime">rgb(0, 255, 0);</div>
+        </div>
+      </div>
+      <p>La couleur ci-dessus est vert, on pourrait aussi l'écrire :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime">rgb(0, 100%, 0);</div>
+        </div>
+      </div>
+      <p>L'équivalent en utilisant le nom d'une couleur :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime">lime;</div>
+        </div>
+      </div>
+      <p>Il existe aussi la fonction hsl(nuance, saturation, luminosité). La nuance est défini en degrès représentant l'angle sur un cercle chromatique, 0deg étant le rouge, 120deg le vert et 240 le bleu. 360deg et 720deg auront pour même résultat que 0deg (rouge).</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime">hsl(120deg 100% 50%);</div>
+        </div>
+      </div>
+      <p>Dans la fonction utilisé, la saturation est à 100%, réduire cette valeur ferais tiré la couleur vers le gris. Le paramètre de la luminosité à 50% donne la couleur normal, à 100% on aurait du blanc, et du noir à 0%.</p>
+      <p>Sans oublié l'hexadécimale :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime">#00ff00;</div>
+        </div>
+      </div>
+      <p>Les deux méthodes rgb() et hsl() sont aussi possible avec rgba() et hsla(), a pour alpha ce qui va permetre d'ajouter un pourcentage de transparence :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime_alpha">rgba(0, 255, 0, 0.5);</div>
+        </div>
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime_alpha">rgba(0, 255, 0, 0.5);</div>
+        </div>
+      </div>
+      <p>L'héxadécimale peut prendre 2 octets supplémentaires pour géré la transparence :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background-color:</div>
+          <div class="value lime_alpha">#00FF007F;</div>
+        </div>
+      </div>
+      <p>Le mot "transparent" peut être utilisé aussi comme nom mais défini quelque chose de transparent. Le fait que il ne défini pas une opacité, celui ci est plus destiné à être utilisé pour les dégradés.</p>
+      <h3>Compatibilité navigateur pour le dégradé repété</h3>
+      <div class="compatibility"><img src="img/compatibility/CSS - color_module.png" alt="CSS - color_module"></div>
+    </div>
+  </body>
+
+</html>

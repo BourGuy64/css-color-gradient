@@ -1,0 +1,213 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif; }
+
+.header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 1.5em 0em 1em 0em;
+  height: 3em;
+  width: 100vw;
+  background: white;
+  box-shadow: 0em 0.2em 2em rgba(0, 0, 0, 0.3); }
+  .header div {
+    text-align: center;
+    margin: auto 0;
+    font-weight: bolder; }
+  .header img {
+    width: 1em;
+    height: 1em;
+    transform: translateY(0.3em);
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px #00000091;
+    border-radius: 50%;
+    padding: .2em; }
+
+.compatibility {
+  overflow-x: auto;
+  width: auto; }
+
+.container {
+  padding: 6em 1em 1em 1em; }
+
+.card-background {
+  text-align: center;
+  padding: 1em;
+  border-radius: .5em;
+  background-color: pink;
+  border: 1px solid black; }
+
+.code_block {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: #f4e9cf;
+  padding: .5em;
+  overflow: auto;
+  font-family: 'COURIER'; }
+  .code_block .code_line {
+    display: flex;
+    margin: .2em 0; }
+  .code_block .attribut {
+    color: red; }
+  .code_block .value {
+    color: blue; }
+  .code_block .lime {
+    color: black;
+    background-color: lime; }
+  .code_block .lime_alpha {
+    color: black;
+    background-color: rgba(0, 255, 0, 0.5); }
+
+.gradient_red_yellow {
+  background: linear-gradient(to right, red, yellow);
+  border-radius: .2em;
+  padding: .5em; }
+
+.gradient_red_yellow50 {
+  background: linear-gradient(to right, red, yellow 50%);
+  border-radius: .2em;
+  padding: .5em; }
+
+.gradient_red_yellow_repeat {
+  background: repeating-linear-gradient(to right, red, yellow 50%);
+  border-radius: .2em;
+  padding: .5em; }
+
+.gradient_red_pink_violet {
+  background: linear-gradient(180deg, red, blue, violet);
+  border-radius: .2em;
+  padding: .5em;
+  color: white; }
+
+.gradient_stopped {
+  background: linear-gradient(90deg, red 33%, blue 33%, blue 66%, green 66%);
+  border-radius: .2em;
+  padding: .5em;
+  color: white; }
+
+.gradient_rainbow {
+  background: linear-gradient(217deg, red, rgba(255, 0, 0, 0) 70%), linear-gradient(127deg, lime, rgba(0, 255, 0, 0) 70%), linear-gradient(336deg, blue, rgba(0, 0, 255, 0) 70%);
+  border-radius: .2em;
+  margin: 1.5em auto;
+  height: 5em;
+  width: 5em;
+  padding: .5em;
+  color: black; }
+
+.grandient_radial {
+  background: radial-gradient(pink, red);
+  border-radius: .2em;
+  padding: .5em; }
+
+.grandient_radial_center_edited {
+  background: radial-gradient(ellipse at 0% 0%, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 15em;
+  border-radius: .2em;
+  padding: .5em;
+  color: black; }
+
+.grandient_radial_circle {
+  background: radial-gradient(circle at 50%, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 15em;
+  border-radius: .2em; }
+
+.grandient_radial_ellipse {
+  background: radial-gradient(at 50%, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 15em;
+  border-radius: .2em; }
+
+.grandient_radial_farthest {
+  background: radial-gradient(ellipse farthest-corner, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 15em;
+  border-radius: .2em; }
+
+.grandient_radial_transparent {
+  background: radial-gradient(closest-side, green, orange, transparent);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 15em;
+  border-radius: .2em; }
+
+.grandient_radial_closest {
+  background: radial-gradient(ellipse closest-side, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 15em;
+  border-radius: .2em; }
+
+.grandient_radial_closest_circle {
+  background: radial-gradient(ellipse closest-side, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 7em;
+  border-radius: .2em;
+  text-align: center;
+  line-height: 7em; }
+
+.grandient_radial_farthest_circle {
+  background: radial-gradient(circle farthest-corner, green, orange, red);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 7em;
+  border-radius: .2em;
+  text-align: center;
+  line-height: 7em; }
+
+.grandient_radial_rainbow {
+  background: radial-gradient(circle at 50% 0, red, rgba(255, 0, 0, 0) 70%), radial-gradient(circle at 6.7% 75%, blue, rgba(0, 0, 255, 0) 70%), radial-gradient(circle at 93.3% 75%, lime, rgba(0, 255, 0, 0) 70%);
+  border-radius: 50%;
+  margin: 1.5em auto;
+  height: 7em;
+  width: 7em; }
+
+.grandient_radial_repeat {
+  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 7em;
+  border-radius: .5em; }
+
+.grandient_conic {
+  background: conic-gradient(from 0deg at 50%, red, blue);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 7em;
+  border-radius: .5em; }
+
+.grandient_conic_moved {
+  background: conic-gradient(from 0deg at 20% 50%, red, blue, yellow);
+  margin: 1.5em auto;
+  height: 7em;
+  width: 7em;
+  border-radius: .5em; }
+
+.gradient_complex {
+  background: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+  height: 7em;
+  border-radius: .5em;
+  margin: 1.5em auto; }
+
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.is-selected {
+  background: linear-gradient(0deg, #9324e6 0%, #00d4ff 100%);
+  padding: .3em;
+  color: white;
+  border-radius: .3em; }
+
+/*# sourceMappingURL=style.css.map */

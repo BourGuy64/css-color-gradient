@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS - Gradient/Color</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="live.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div><a href="index.html">Color Module</a> et <a class="is-selected" href="gradient.html">CSS Gradient</a> </div>
+      <div>Démo : <a href="https://codepen.io/thebas57/pen/zYOVZbb"><img src="img/codepen.svg" alt="codepen" href="https://codepen.io/thebas57/pen/zYOVZbb"></a></div>
+    </div>
+    <div class="container">
+      <h2>CSS Gradient</h2>
+      <h3>Dégradé linéaire</h3>
+      <p>En CSS, les gradients sont les différentes façon de crée des dégradés. Utilisé notament pour des backgrounds.</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(to right, red, yellow);</div>
+        </div>
+      </div>
+      <p>En paramètre de linear-gradient nous avons d'abord la direction du degradé linéaire, on peut le définir de manière sémantique comme on peut voir au dessus (to right), le dégradé va aller de gauche à droite.</p>
+      <p>Ou bien avec un angle en degrès (0deg = de bas en haut). Les paramètres suivant peuvent être nombreux, 2 minimum si on veut faire un dégradé (il faut 2 couleurs en toute logique), mais on peut ajouter beaucoup de couleurs en paramètres.</p>
+      <p class="gradient_red_yellow">Ce paragraphe à pour dégradé, la dernière règle de style donnée.</p>
+      <p>A chaque couleur déclarer on peut ajouter l'emplacement où s'arrète la couleur, on peut utiliser les unités de mesure (px, em, % etc..). Par exemple si on ajoute 50% à yellow, le dégradé du rouge vers le jaune sera plus court, de plus le jaune prendra une plus grosse partie, de 50% à 100%.</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(to right, red, yellow 50%);</div>
+        </div>
+      </div>
+      <p class="gradient_red_yellow50">Dégradé du rouge à 0% jusqu'à jaune à 50% (50% à 100% = jaune)</p>
+      <p>Si on a un dégradé qui s'arrête plus tôt que les 100% on peut ajouter repeating au début du nom de la fonction, pour que le dégradé se repète.</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">repeating-linear-gradient(to right, red, yellow 50%);</div>
+        </div>
+      </div>
+      <p class="gradient_red_yellow_repeat">Dégradé qui se repète.</p>
+      <p>Par défaut un dégradé où les pourcentages ne sont pas définis pour les couleurs, alors les pourcentages sont calculés automatiquement par fraction.</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(180deg, red, blue, violet);</div>
+        </div>
+      </div>
+      <p class="gradient_red_pink_violet">Les couleurs sont placé dans le sens de lecture des paramètres, première couleur commence forcément à 0%.</p>
+      <p>Bien entendu les couleurs décrites pour les dégradés sont des color modules et peuvent être choisis à l'aide des différentes manière décrite précedemment.</p>
+      <p>Les couleurs peuvent prendre aussi 2 unités de mesure afin que cette couleur soit stop net :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(0deg, red 33%, blue 33%, blue 66%, violet 66%);</div>
+        </div>
+      </div>
+      <p class="gradient_stopped">Dégradé pas vraiment dégradé, les couleurs sont arreté net. Car leurs limites sont accolées.</p>
+      <p>Il est possible d'accumuler les dégradés de cette façon :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(217deg, rgb(255,0,0), rgba(255,0,0,0) 70%),<br>
+                            linear-gradient(127deg, rgb(0,255,0), rgba(0,255,0,0) 70%),<br>
+                            linear-gradient(336deg, rgb(0,0,255), rgba(0,0,255,0) 70%);</div>
+        </div>
+      </div>
+      <div class="gradient_rainbow"></div>
+      <h3>Dégradé radial</h3>
+      <p>Le dégradé peut être crée de façon radial, du center vers les extrémités</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">linear-gradient(0deg, red 33%, blue 33%, blue 66%, violet 66%);</div>
+        </div>
+      </div>
+      <p class="grandient_radial">Dégrade du rose, au centre vers le rouge.</p>
+      <p>Le dégradé peut prendre un paramètre avant de déclaré les couleurs afin de définir le centre :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(at 0% 0%, green, orange, red);</div>
+        </div>
+      </div>
+      <p class="grandient_radial_center_edited">Le centre est situé à 0% sur l'axe X et à 0% sur l'axe Y du conteneur. Soit en haut à gauche, on commence par le vert en allant vers le rouge en passant par le orange.</p>
+      <p>Le dégradé circulaire prend la forme de la div par défaut (ellipse), mais on peut forcer pour que le dégradé est bien la forme d'un cercle en ajoutant "circle" avant le positonnement du centre.</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(circle at 50%, green, orange, red);</div>
+        </div>
+      </div>
+      <div class="grandient_radial_circle"></div>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(ellipse at 50%, green, orange, red);</div>
+        </div>
+      </div>
+      <div class="grandient_radial_ellipse"></div>
+      <p>Un dégradé qui va jusqu'au bord le plus proche :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(closest-side, green, orange, red);</div>
+        </div>
+      </div>
+      <div class="grandient_radial_closest"></div>
+      <p>Un dégradé qui va jusqu'au bords les plus éloignées :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(farthest-corner, green, orange, red);</div>
+        </div>
+      </div>
+      <div class="grandient_radial_farthest"></div>
+      <p>Un dégradé qui s'éstompe:</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(closest-side, green, orange, transparent);</div>
+        </div>
+      </div>
+      <div class="grandient_radial_transparent"></div>
+      <p>Un cercle dégradé selon le paramètre closest-side :</p>
+      <div class="col-2">
+        <div class="grandient_radial_closest_circle">closest-side</div>
+        <div class="grandient_radial_farthest_circle">farthest-corner</div>
+      </div>
+      <p>Accumulation de dégradés radiaux:</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">radial-gradient(circle at 50% 0, rgb(255,0,0), rgba(255,0,0,0) 70%),<br>
+                            radial-gradient(circle at 6.7% 75%, rgb(0,0,255 rgba(0,0,255,0) 70%),<br>
+                            radial-gradient(circle at 93.3% 75%, rgb(0,255,0), rgba(0,255,0,0) 70%);
+          </div>
+        </div>
+      </div>
+      <div class="grandient_radial_rainbow"></div>
+      <p>Le dégradé radial peut lui aussi être repété :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">repeating-radial-gradient(black, black 5px, white 5px, white 10px);</div>
+        </div>
+      </div>
+      <div class="grandient_radial_repeat"></div>
+      <h3>Compatibilité navigateur pour CSS gradient</h3>
+      <div class="compatibility"><img src="img/compatibility/CSS - Gradient.png" alt="CSS - Gradient"></div>
+      <h3>Dégradé conique</h3>
+      <p>La fonction conic-gradient(from <i>angle</i> at <i>position</i>  , <i>color</i>, <i>color</i>) permet de crée une dégradé dans le sens des aiguilles d'une montre:</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">conic-gradient(from 0deg at 50%, red, blue);</div>
+        </div>
+        <div class="code_line">=</div>
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">conic-gradient(red, blue);</div>
+        </div>
+      </div>
+      <div class="grandient_conic"></div>
+      <p>Le dégradé commence à un angle de 0deg et son positonnement est le milieu du conteneur. On peut donc changer l'angle à partir du quel le rouge commence mais aussi le déplacer.</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">conic-gradient(from 0deg at 20% 50%, red, blue, yellow);</div>
+        </div>
+      </div>
+      <div class="grandient_conic_moved"></div>
+      <h3>Compatibilité navigateur pour le dégradé conique</h3>
+      <div class="compatibility"><img src="img/compatibility/CSS - Conical gradient.png" alt="CSS - Conical gradient"></div>
+      <br>
+      <p>Les dégradés peuvent permettres de crée des structure complexes et variées :</p>
+      <div class="code_block">
+        <div class="code_line">
+          <div class="attribut">background:</div>
+          <div class="value">repeating-linear-gradient(90deg, transparent, transparent 50px,<br>
+                                rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,<br>
+                                transparent 56px, transparent 63px,<br>
+                                rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,<br>
+                                transparent 69px, transparent 116px,<br>
+                                rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),<br>
+                              repeating-linear-gradient(0deg, transparent, transparent 50px,<br>
+                                rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,<br>
+                                transparent 56px, transparent 63px,<br>
+                                rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,<br>
+                                transparent 69px, transparent 116px,<br>
+                                rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),<br>
+                              repeating-linear-gradient(-45deg, transparent, transparent 5px,<br>
+                                rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),<br>
+                              repeating-linear-gradient(45deg, transparent, transparent 5px,<br>
+                                rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+            </div>
+        </div>
+      </div>
+      <div class="gradient_complex"></div>
+      <h3>Compatibilité navigateur pour le dégradé repété</h3>
+      <div class="compatibility"><img src="img/compatibility/CSS - Repeating gradient.png" alt="CSS - Repeating gradient"></div>
+    </div>
+  </body>
+
+</html>
